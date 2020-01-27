@@ -1,0 +1,796 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #67686d;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: 'Roboto', sans-serif;
+	/* font-family: 'Roboto Condensed', sans-serif; */
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #f75546;
+	text-decoration: underline;
+}
+a:hover {
+	color: #f75546;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #f75546;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+.center-block-main {
+	margin: 0 auto;
+	max-width: 1170px;
+	overflow-x: hidden;
+}
+.header-top {
+	padding-top: 30px;
+	border-bottom: 1px solid #eeeeee;
+	padding-bottom: 30px;
+}
+
+.logo {
+	float: left;
+	font-size: 1.375em;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-top: 6px;
+}
+.contact-basket {
+	float: right;
+}
+	.contact-basket p {
+		float: left;
+		font-weight: 600;
+		font-size: 0.75em;
+	}
+.img-phone {
+	padding-left: 23px; 
+	background: url(images/ico-phone.jpg) left center no-repeat;
+	padding: 10px 25px;
+}
+.img-basket {
+	padding-left: 23px;
+	background: url(images/ico-basket.jpg) left 10px center no-repeat;
+	border: 1px solid #eeeeee;
+	padding: 10px 10px 10px 35px;
+	margin-left: 10px;
+}
+	.img-basket a {
+		text-transform: uppercase;
+		margin-left: 20px;
+		text-decoration: none;
+		color: #67686d;
+}
+.img-basket a:hover {
+	color: #f75546;
+	transition: 0.3s;
+}
+.header-bottom {
+	padding-top: 10px;
+}
+.menu {
+	float: left;
+	display: inline;
+}
+	.menu li {
+		float: left;
+		text-transform: uppercase;
+		margin-right: 20px;
+		font-size: 0.75em;
+	}
+		.menu li a {
+			text-decoration: none;
+			color: #67686d;
+		}
+.menu li a:hover {
+	color: #f75546;
+	transition: 0.3s;
+}
+input.search {
+	padding-left: 3px; 
+	text-decoration: none;
+	border: none;
+	font-size: 0.75em;
+	color: #67686d;
+	margin-top: -3px;
+}
+.position-buttone {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.button-search {
+	background: url(images/search-btn.jpg) left center no-repeat;
+	padding: 0;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	cursor: pointer; 
+	margin-left: 20px;
+	margin-top: -3px;
+}
+
+.swiper-container {
+	margin: 10px 0px 50px 0px;
+}
+
+.swiper-container .swiper-button-prev, 
+.swiper-container .swiper-button-next {
+	color: #ffffff;
+}
+
+.swiper-container .swiper-pagination-bullet-active {
+	background: #f75546;
+}
+
+.h2-slider {
+	font-size: 3.6875em;
+	text-transform: uppercase;
+	color: #f75546;
+	top: 230px;
+	font-weight: bold; 
+	line-height: 1.1;
+	position: absolute;
+	left: 45px;
+}
+
+.swiper-container p {
+	font-size: 0.75em;
+	color: #f75546;
+	position: absolute;
+	top: 360px;
+	left: 45px;
+}
+
+.slide-width {
+	width: 100%;
+}
+
+.blocks3-main article {
+	width: 31.6%;
+	float: left;
+	margin-left: 2.6%;
+}
+
+.blocks3-main article:first-child {
+	margin-left: 0;
+}
+
+.blocks3-main article img {
+	display: block;
+	margin: 0 auto 20px auto;	
+}
+
+.blocks3-main article h2 {
+	margin-bottom: 10px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.375em;
+}
+
+.blocks3-main article p {
+	font-size: 0.75em;
+	margin-bottom: 60px;
+}
+
+.blocks3-main article a {
+	text-decoration: none;
+}
+
+.blocks3-main article a:hover {
+	text-decoration: underline;
+}
+
+section>h2 {
+	text-align: center;
+	margin-bottom: 40px;
+	color: #67686d;
+	text-transform: uppercase;
+	font-size: 1.375em;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+section div article {
+	margin-bottom: 30px;
+}
+
+.block-popular article {
+	float: left;
+	width: 23.1%;
+	margin-left: 2.5%;
+}
+
+.block-popular article:nth-child(1) {
+	margin-left: 0;
+}
+
+section div h2 {
+	text-transform: uppercase;
+	padding-bottom: 5px;
+	color: #67686d;
+	font-size: 1.125em;
+}
+section article h3 {
+	text-transform: uppercase;
+	padding-bottom: 10px;
+	font-size: 0.875em;
+}
+
+section article p {
+	font-size: 0.625em;
+}
+
+.block-popular-main {
+	border: 1px solid #f2f2f2;
+	margin-top: -5px;
+	border-top: none;
+	margin-bottom: 1px;
+	padding: 20px;
+	/*word-wrap: break-word;*/
+	/*overflow-wrap: break-word;*/
+}
+
+section div .block-price-basket {
+	border-top: 1px solid #f2f2f2;
+	font-size: 0.875em;
+	color: #f75546;
+	padding-bottom: 0px;
+	padding-top: 6px;
+	margin-top: 10px;
+}
+
+.price{
+	float: left;
+	padding-top: 5px;
+}
+
+.basket-button {
+	background: url(images/ico-plus.jpg) right center no-repeat;
+	float: right;
+	height: 20px;
+	width: 20px;
+	margin-top: 3px;
+	cursor: pointer;
+}
+
+.block-about {
+	float: left;
+	width: 60%;
+}
+
+.block-about h2 {
+	font-size: 1.325em;
+	margin-bottom: 40px;
+	font-weight: bold;
+	color: #67686d; 
+}
+
+.center-block-main .block-about p {
+	font-size: 0.875em;
+	font-style: italic;
+	margin-bottom: 25px;
+}
+
+.block-map {
+	float: right;
+	width: 35%;
+}
+
+.responsive-map {
+	position: relative;
+	height: 0;
+	padding-bottom: 75%; /* 450/600 */
+	overflow: hidden;
+}
+
+.responsive-map iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.block-sign-up {
+	margin-top: 30px;
+	width: 100%;
+	background: #f75546;
+	/*height: 100px;*/
+}
+
+.block-sign-up .center-block-main {
+	overflow-x: hidden;
+}
+
+.sign-up-text {
+	float: left;
+	color: #ffffff;
+	font-size: 1.325em;
+	padding: 37px 0px 30px 0px;
+	text-transform: uppercase;
+}
+
+.form-sign-up {
+	float: right;
+	padding: 30px 0px 30px 0px;
+}
+
+.input-email {
+	padding: 10px 20px 10px 20px;
+	color: #7e7f84;
+	width: 200px;
+	text-transform: uppercase;
+	font-size: 0.875em;
+	border: none;
+	float: left;
+}
+
+.button-sign-up {
+	background: #ff6354;
+	border: none;
+	padding: 10px 20px 10px 20px;
+	color: #ffffff;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-left: 20px;
+	float: left;
+	font-size: 0.875em;
+}
+
+footer {
+	background: #2a2d33;
+	padding-top: 40px;
+}
+
+footer div article h2 {
+	color: #ffffff;
+	font-size: 1.325em;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 10px; 
+}
+
+.footer-content-block p {
+	font-size: 0.78em;
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
+.footer-content-block h3 a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 0.875em;
+}
+.footer-content-block h3 a:hover {
+	text-decoration: underline;
+}
+
+.footer-support {
+	float: left;
+	width: 47%;
+	margin-right: 3%;
+}
+
+.footer-support a {
+	display: block;
+	color: #67686d;
+	text-decoration: none;
+}
+
+.footer-support a:hover {
+	text-decoration: underline;
+}
+
+.footer-email-form {
+	width: 100%;
+	padding: 10px 20px 10px 20px;
+	color: #7e7f84; 
+	text-transform: uppercase;
+	font-size: 0.75em;
+	border: none;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.footer-textarea {
+	width: 100%;
+	padding: 10px 20px 10px 20px;
+	color: #7e7f84;
+	text-transform: uppercase;
+	font-size: 0.75em;
+	border: none;
+	margin-bottom: 17px;
+	box-sizing: border-box;
+	height: 70px;
+}
+
+.footer-submit-button {
+	background: #f75546;
+	border: none;
+	padding: 10px 20px 10px 20px;
+	color: #ffffff;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 0.875em;
+}
+
+@media screen and (max-width:900px) {
+	.h2-slider {
+	font-size: 3em;
+	top: 150px;
+	left: 40px;
+}
+
+.swiper-container p {
+	top: 260px;
+	left: 40px;
+}	
+
+.block-popular article {
+	width: 45%;
+	margin: 0 2.5% 5% 2.5%;
+}
+
+.block-popular article:nth-child(1) {
+	margin-left: 2.5%;
+}
+
+section .block-popular article img {
+	width: 100%;
+}
+
+.sign-up-text {
+	text-align: center;
+	padding: 37px 0px 25px 0px;
+	float: none;
+}
+
+.form-sign-up {
+	padding: 0px 0px 30px 0px;
+	float: none;
+	display: table;
+	margin: 0 auto;
+}
+}
+
+@media screen and (max-width:740px) {
+
+.h2-slider {
+	font-size: 2em;
+	top: 100px;
+	left: 40px;
+}
+
+.swiper-container p {
+	top: 170px;
+	left: 40px;
+}	
+
+.search-block {
+	display: inline-block;
+	margin-top: 10px;
+	border-bottom: 1px solid #eeeeee;
+	border-top: 1px solid #eeeeee;
+	margin-right: 100%;
+	padding: 7px 0 5px 0;
+}
+}
+
+@media screen and (max-width:600px) {
+	.blocks3-main article {
+	width: 95%;
+	margin: 0 2.5% 0 2.5%;
+}
+
+.blocks3-main article:first-child {
+	margin-left: 2.5%;
+}
+
+.blocks3-main article img {
+	width: 100%;
+}
+
+.block-about {
+	float: none;
+	width: 95%;
+	margin: 0 2.5% 0 2.5%; 
+}
+
+.block-map {
+	float: none;
+	width: 95%;
+	margin: 0 2.5% 0 2.5%;
+}
+}
+
+@media screen and (max-width:480px) {
+
+.header-top {
+	padding-top: 10px;
+	border-bottom: 1px solid #eeeeee;
+	padding-bottom: 10px;
+}
+
+.img-phone {
+	background: url(images/ico-phone.jpg) left 10px center no-repeat;
+	padding: 10px 25px;
+	margin-right: 10px;
+}
+
+.img-basket {
+	background: url(images/ico-basket.jpg) left 10px center no-repeat;
+	border: 1px solid #eeeeee;
+	padding: 10px 10px 10px 35px;
+	margin-left: 0px;
+}	
+
+.contact-basket {
+	float: right;
+	display: inline-block;
+	width: 50%;
+}
+
+.header-bottom {
+	margin-left: 32%;
+}
+
+.header-bottom nav {
+	width: 81%;
+	line-height: 1.5;
+}
+
+.for-media {
+	padding-left: 7px;
+}
+
+.search-block {
+	margin-left: 10px;
+}
+
+.h2-slider {
+	font-size: 1.325em;
+	top: 120px;
+	left: 40px;
+}
+
+.swiper-container {
+	margin-bottom: 20px;
+}
+
+.swiper-container p {
+	top: 166px;
+	left: 40px;
+}	
+
+.swiper-slide p br {
+	display: none;
+}
+
+.blocks3-main article img {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.blocks3-main article h2 {
+	margin-bottom: 1px;
+}
+
+.blocks3-main article p {
+	margin-bottom: 20px;
+}
+
+section h2 {
+	margin-bottom: 20px;
+}
+
+div .block-about h2 {
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.block-popular article {
+	width: 95%;
+	margin: 0 2.5% 0% 2.5%;
+}
+
+.block-popular article:nth-child(1) {
+	margin-left: 2.5%;
+}
+
+.block-popular article h2 {
+	margin-bottom: 10px;
+}
+
+footer {
+	padding-bottom: 30px;
+}
+}
+
+@media screen and (max-width:441px) {
+.header-bottom nav {
+	width: 80%;
+}	
+
+.header-bottom {
+	margin-left: 27%;
+}
+}
+
+@media screen and (max-width:391px) {
+.header-bottom nav {
+	width: 90%;
+}	
+
+.h2-slider {
+	font-size: 1.2em;
+	top: 120px;
+}
+
+.swiper-container {
+	margin-bottom: 10px;
+}
+
+.swiper-container p {
+	top: 160px;
+}	
+}
+
+@media screen and (max-width:362px) {
+
+.h2-slider {
+	font-size: 1.2em;
+	top: 100px;
+}
+
+.swiper-container p {
+	top: 140px;
+}	
+
+}
+
+@media screen and (max-width:355px) {
+
+.header-top {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.logo {
+	float: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-top: 6px;
+	text-align: center;
+}
+
+.contact-basket {
+	float: none;
+	display: inline-block;
+	width: 60%;
+	text-align: center;
+	margin-left: 26%;
+}
+
+.header-bottom {
+	margin-left: 23%;
+}
+
+.header-bottom nav {
+	width: 90%;
+}	
+
+.input-email {
+	width: 95%;
+	float: none;
+	margin: 0 2.5% 20px 2.5%;
+	box-sizing: border-box;
+}
+
+.button-sign-up {
+	margin-left: 33%;
+	float: none;
+}
+
+@media screen and (max-width:325px) {
+
+.contact-basket {
+	margin-left: 75px;
+}
+
+.header-bottom {
+	margin-left: 65px;
+}
+
+.h2-slider {
+	font-size: 1.1em;
+	top: 80px;
+}
+
+.swiper-container p {
+	top: 120px;
+}	
+}
+
+input[type="submit"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
